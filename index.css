@@ -11,6 +11,10 @@ body {
 .slides {
     overflow: hidden;
 }
+.slider input[type=radio]{
+    display: none;
+}
+
 .img-box {
     display: flex;
     width: 100%;
@@ -20,11 +24,30 @@ body {
 .img-box img {
     width: 100%;
     flex-shrink:0;
-  }
+}
 
+.text-slides {
+    overflow: hidden;
+}
+
+.text-box {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s;
+}
+.text-box p {
+    width: 100%;
+    flex-shrink:0;
+    color: white;
+    font-size: 18px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
   
   #button-1:checked~.slides .img-box {
-    transform: translate(0);
+    transform: translateX(0);
   }
   
   #button-2:checked~.slides .img-box{
@@ -38,24 +61,52 @@ body {
     transform: translateX(-300%);
   }
 
+  #button-1:checked~.content .text-slides .text-box {
+    transform: translateX(0);
+  }
+  
+  #button-2:checked~.content .text-slides .text-box {
+    transform: translateX(-100%);
+  }
+  
+  #button-3:checked~.content .text-slides .text-box {
+    transform: translateX(-200%);
+  }
+  #button-4:checked~.content .text-slides .text-box {
+    transform: translateX(-300%);
+  }
 
-  #button-1 {
-    position: absolute;
-    top: 600px;
-    left: 690px;
+  .custom-radio label {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #71abff;
+    background-color: #71abff;
+    margin-top: 18px;
   }
-  #button-2 {
-    position: absolute;
-    top: 600px;
-    left: 720px;
+
+  .custom-radio label:hover {
+    border: 3px solid white;
+    background-color: white;
   }
-  #button-3 {
-    position: absolute;
-    top: 600px;
-    left: 750px;
+ 
+  #button-1:checked~.content .custom-radio label[for="button-1"] {
+    border: 3px solid white;
+    background-color: black;
   }
-  #button-4 {
-    position: absolute;
-    top: 600px;
-    left: 780px;
+  
+  #button-2:checked~.content .custom-radio label[for="button-2"] {
+    border: 3px solid white;
+    background-color: black;
+  }
+  
+  #button-3:checked~.content .custom-radio label[for="button-3"] {
+    border: 3px solid white;
+    background-color: black;
+  }
+  #button-4:checked~.content .custom-radio label[for="button-4"] {
+    border: 3px solid white;
+    background-color: black;
   }
