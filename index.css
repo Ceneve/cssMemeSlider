@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+}
+.slider {
+    width: 800px;
+    height: 600px;
+	position: relative;
+    margin: 200px auto;
+}
+
+.slides {
+    overflow: hidden;
+}
+.img-box {
+    display: flex;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.img-box img {
+    width: 100%;
+    flex-shrink:0;
+  }
+
+  
+  #button-1:checked~.slides .img-box {
+    transform: translate(0);
+  }
+  
+  #button-2:checked~.slides .img-box{
+    transform: translateX(-100%);
+  }
+  
+  #button-3:checked~.slides .img-box {
+    transform: translateX(-200%);
+  }
+  #button-4:checked~.slides .img-box {
+    transform: translateX(-300%);
+  }
+
+
+  #button-1 {
+    position: absolute;
+    top: 600px;
+    left: 690px;
+  }
+  #button-2 {
+    position: absolute;
+    top: 600px;
+    left: 720px;
+  }
+  #button-3 {
+    position: absolute;
+    top: 600px;
+    left: 750px;
+  }
+  #button-4 {
+    position: absolute;
+    top: 600px;
+    left: 780px;
+  }
