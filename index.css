@@ -2,14 +2,16 @@ body {
     background-color: black;
 }
 .slider {
-    width: 800px;
-    height: 600px;
-	  position: relative;
-    margin: 50px auto;
+    max-width: 800px;
+    max-height: 600px;
+	  position: static;
+    margin: 5em auto;
 }
 
 .slides {
     overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .slider input[type=radio]{
     display: none;
@@ -45,6 +47,8 @@ body {
 .content {
     display: flex;
     justify-content: space-between;
+    width: 750px;
+    margin-left: 20px;
 }
   
   #button-1:checked~.slides .img-box {
@@ -77,6 +81,9 @@ body {
     transform: translateX(-300%);
   }
 
+  .custom-radio {
+    margin-left: 5px;
+  }
   .custom-radio label {
     display: inline-block;
     width: 7px;
@@ -86,6 +93,7 @@ body {
     cursor: pointer;
     border-radius: 50%;
     margin-top: 18px;
+    margin-left: 8px;
   }
 
   .custom-radio label:hover {
@@ -112,12 +120,14 @@ body {
     background-color: black;
   }
 
-  @media (max-width:760px) {
+  @media (max-width:768px) {
     .content {
-      align-items: center;
       flex-direction: column-reverse;
     }
     .text-box {
       margin-right: 135px;
+    }
+    .custom-radio {
+      margin-left: 85px;
     }
   }
