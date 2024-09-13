@@ -4,8 +4,8 @@ body {
 .slider {
     width: 800px;
     height: 600px;
-	position: relative;
-    margin: 200px auto;
+	  position: relative;
+    margin: 50px auto;
 }
 
 .slides {
@@ -24,6 +24,7 @@ body {
 .img-box img {
     width: 100%;
     flex-shrink:0;
+    border-radius: 1%;
 }
 
 .text-slides {
@@ -80,10 +81,10 @@ body {
     display: inline-block;
     width: 7px;
     height: 7px;
-    cursor: pointer;
-    border-radius: 50%;
     border: 3px solid #71abff;
     background-color: #71abff;
+    cursor: pointer;
+    border-radius: 50%;
     margin-top: 18px;
   }
 
@@ -109,4 +110,14 @@ body {
   #button-4:checked~.content .custom-radio label[for="button-4"] {
     border: 3px solid white;
     background-color: black;
+  }
+
+  @media (max-width:760px) {
+    .content {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+    .text-box {
+      margin-right: 135px;
+    }
   }
